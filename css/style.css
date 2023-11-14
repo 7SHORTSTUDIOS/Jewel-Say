@@ -368,13 +368,13 @@
     background-size: cover;
 }
 
-h2 {
-    font-size: 40px;
+h1 {
+    font-size: 36px;
     color: #333;
 }
 
 p {
-    font-size: 34px;
+    font-size: 25px;
     color: #777;
 }
 
@@ -402,11 +402,13 @@ p {
 }
 
 .testimonial-card h3 {
+    margin-top: 10px;
     font-size: 20px;
     color: #333;
 }
 
 .testimonial-card p {
+    margin-top: 10px;
     font-size: 16px;
     color: #777;
 }
@@ -419,7 +421,7 @@ p {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 36px;
     color: #333;
 }
 
