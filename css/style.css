@@ -11,12 +11,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 /* Style for the logo */
 .logo img {
-    width: 130px; /* Adjust the width as needed */
+    width: 200px; /* Adjust the width as needed */
 }
 
 /* Style for the search section */
@@ -47,10 +47,11 @@
 }
 
 .menu a {
+    font-family: 'recoletaregular_demo';
     text-decoration: none;
     color: #9d6480;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 /* Style for user and Instagram symbols */
@@ -66,138 +67,70 @@
     /* margin-left: 30px; */
 }
 
-/* Style for the hero section with background image */
-.hero {
-    background-image: url('../img/bg1.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 550px;
-    display: flex;
-    align-items: center;
+/* hero */
+
+.hero-section {
+    background-color: #FCD4DF;
     position: relative;
-}
-
-/* Style for the text on the right side */
-.hero-text {
-    margin-left: 160px;
-    font-size: 38px;
-    font-family:Recoleta; 
-    flex: 1;
-    padding: 20px;
-    text-align: left;
-    color: #592d46;
-    z-index: 2; 
-}
-
-/* Style for the photos on the left side */
-.photos {
-    margin-right: 123px;
-    margin-bottom: 377px;
-    flex: .3;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.photo-container {
-    position: relative;
-}
-
-.photo {
-    width: 300px;
-    height: auto;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Set text color to white */
+    z-index: -1;
+  }
+
+  .slider-container {
     position: absolute;
-    transition: left 0.5s;
-}
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the slider to the background */
+    display: flex;
+    animation: slide 24s infinite linear; /* Adjust duration based on the number of images */
+  }
 
-.photo img {
-    max-width: 100%;
-    height: auto;
-}
+  .slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-
-.photo.sliding {
-    left: 500px; /* Initial position */
-    animation: sliding 1.5s ease forwards; /* Apply the sliding animation */
-}
-@keyframes sliding {
-    0% {
-        left: 500px;
+  @keyframes slide {
+    0%, 100% {
+      transform: translateX(0%);
     }
-    100% {
-        left: 0;
+    50% {
+      transform: translateX(-100%);
     }
-}
+    50% {
+      transform: translateX(-200%);
+    }
+  }
 
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 20px; /* Adjust padding as needed */
+  }
 
-.photo.sliding {
-    opacity: 1;
-}
-
-
+  .overlay h1 {
+    margin-left: 170px;
+    font-family: 'recoletaregular_demo';
+    font-size: 70px; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
 /* divyangana */
-
-/* Define a keyframe animation for fading in */
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.heros {
-    background-image: url('../img/bg1.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 550px;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-/* Style for the text on the right side */
-.heros-text {
-    margin-left: 160px;
-    font-size: 38px;
-    font-family: Recoleta;
-    flex: 1;
-    padding: 20px;
-    text-align: left;
-    color: #592d46;
-    z-index: 2;
-}
-
-/* Style for the photos on the left side */
-.photoss {
-    margin-bottom: 508px;
-    flex: 0.5;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.photos-container {
-    position: relative;
-}
-
-.photosss {
-    width: 400px;
-    height: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    position: absolute;
-    animation: fade-in 1s; /* Apply the fade-in animation */
-    transition: left 0.5s;
-}
-
-.photosss img {
-    max-width: 100%;
-    height: auto;
-}
 
 
 /* Style for the "About" section */
@@ -228,7 +161,8 @@
 }
 
 .about-content h2 {
-    font-size: 75px;
+    font-family: 'recoletaregular_demo';
+    font-size: 70px;
     margin-bottom: 10px;
     color: #592d46;
 }
@@ -265,8 +199,9 @@
 }
 
 .product-header h1 {
-    font-size: 36px;
-    color: black;
+    font-family: 'recoletaregular_demo';
+    font-size: 65px;
+    color: #592d46;
 }
 
 .product-cards {
@@ -368,12 +303,13 @@
     background-size: cover;
 }
 
-h1 {
-    font-size: 36px;
-    color: #333;
+.client-section h1 {
+    font-family: 'recoletaregular_demo';
+    font-size: 65px;
+    color: #592d46;
 }
 
-p {
+.client-section p {
     font-size: 25px;
     color: #777;
 }
@@ -421,8 +357,9 @@ p {
 }
 
 h2 {
-    font-size: 36px;
-    color: #333;
+    font-family: 'recoletaregular_demo';
+    font-size: 65px;
+    color: #592d46;
 }
 
 .contact-container {
@@ -507,17 +444,11 @@ button:hover {
 }
 
 
-style
-@font-face {
-    font-family: Recoleta;
-    src: url('Recoleta-RegularDEMO.otf');
+@font-face{
+    font-family: myfont;
+    src: url('/fonts/Recoleta-RegularDEMO.otf');
 }
 
 
 
-
-
-
-
-/* shop */
 
